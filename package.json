@@ -1,0 +1,21 @@
+{
+  "name": "schoolexpo",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "([ -f frontend/build/index.html ] || npm run build:frontend) && node server.js",
+    "build": "npm run build:frontend",
+    "build:frontend": "cd frontend && NODE_ENV=production npm run build",
+    "start": "node server.js",
+    "lint": "node --check server.js && cd frontend && npx eslint src"
+  },
+  "dependencies": {
+    "@google/genai": "^3.6.1",
+    "bcryptjs": "^3.0.3",
+    "cookie-parser": "^1.4.7",
+    "dotenv": "^17.3.1",
+    "express": "^4.21.2",
+    "jsonwebtoken": "^9.0.2",
+    "pdfkit": "^0.17.2"
+  }
+}

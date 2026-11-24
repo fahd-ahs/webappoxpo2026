@@ -1,0 +1,122 @@
+{
+  "theme": "dark",
+  "archetype": "Archetype 5 (Jewel & Luxury) + Tech Dashboard - 'Academic Dark Glass'",
+  "colors": {
+    "base": {
+      "background": "#0a0e1a",
+      "surface": "#111827",
+      "surface_glass": "rgba(17, 24, 39, 0.6)",
+      "border": "rgba(255, 255, 255, 0.1)"
+    },
+    "accents": {
+      "primary": "#6366f1",
+      "secondary": "#22d3ee",
+      "success": "#10b981",
+      "warning": "#f59e0b",
+      "error": "#ef4444"
+    },
+    "text": {
+      "primary": "#ffffff",
+      "secondary": "rgba(255, 255, 255, 0.7)",
+      "muted": "rgba(255, 255, 255, 0.4)",
+      "accent_primary": "#818cf8",
+      "accent_secondary": "#67e8f9"
+    }
+  },
+  "typography": {
+    "fonts": {
+      "headings": "'Outfit', sans-serif",
+      "body": "'DM Sans', sans-serif",
+      "mono": "'JetBrains Mono', monospace"
+    },
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl tracking-tighter font-medium",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl tracking-tight font-medium",
+      "h3": "text-xl sm:text-2xl tracking-tight font-medium",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body": "text-base leading-relaxed text-white/70",
+      "body_sm": "text-sm text-white/60",
+      "overline": "text-xs tracking-[0.2em] uppercase text-white/40 font-mono"
+    },
+    "instructions": "BANNED LIST obeyed: Syne replaced with Outfit for headings. Headings must have tracking-tighter/tracking-tight. Overlines must use font-mono, be uppercase and tracking-[0.2em]. Line height tight for headers, loose for body."
+  },
+  "surface_styles": {
+    "glassmorphism": "The 'Crystal' Variant. Background: bg-[#111827]/60, Blur: backdrop-blur-xl or backdrop-blur-2xl, Border: 1px delicate inner stroke border-white/10. Shadow: shadow-[0_8px_32px_rgba(0,0,0,0.12)]. Use this for dashboard cards, sticky headers, and sidebars.",
+    "flat_solid": "Use pure flat #111827 with 1px border-white/5 for deep background elements that don't need refraction.",
+    "tracing_beam": "For pricing/upgrade/premium cards, use a shimmering gradient border (or motion.div tracing border).",
+    "buttons": "CTAs use #6366f1 or gradient-to-r from-#6366f1 to-#22d3ee but subtle, text-white. Hover state: lighter hue or glow shadow. Secondary buttons: bg-white/5 hover:bg-white/10 text-white border border-white/10."
+  },
+  "layout_and_spacing": {
+    "spacing_scale": "p-1, p-2, p-4, p-6, p-8, p-12, p-16. Containers with borders MUST have internal padding (p-6 or p-8) to prevent text collision.",
+    "grid_bento": "MODE B: THE CONTROL ROOM GRID for dashboards. Base Grid: grid-cols-1 md:grid-cols-3 lg:grid-cols-4. Tight gap (gap-4 or gap-6). Use h-full on children. No jagged bottoms.",
+    "mobile_images": "max-h-[80vh] md:max-h-none",
+    "alignment": "Optical alignment over geometrical. Center headings only if needed; everything else left-aligned for data clarity.",
+    "general": "Start with grid-cols-1 (Mobile First). Ensure the header has a background (glassmorphism) and z-50."
+  },
+  "components": {
+    "shadcn": {
+      "usage": "Use heavily customized Shadcn components for advanced interactions (Tabs, Dropdowns, Dialogs, Select, Calendar, Charts).",
+      "styling": "Strip default 'Vercel-look'. Override radii to max 8px (rounded-lg) or even 12px (rounded-xl) for organic glass feel. Use the glassmorphism surface_styles.",
+      "charts": "Use Recharts (Shadcn chart component). Dark mode tooltips with border-white/10. Colors: indigo, cyan, emerald.",
+      "calendars": "Use Shadcn calendar, style active days with #6366f1, completely transparent background. Keep dark mode theme.",
+      "inputs": "bg-black/20 border-white/10 text-white placeholder:text-white/30 focus-visible:ring-1 focus-visible:ring-[#6366f1]"
+    },
+    "custom": {
+      "gamification": "Podium, XP bars, streak flames should be built with raw Tailwind + Framer Motion. Use vivid accents (success, warning) on dark bg.",
+      "prepmeter_radar": "Recharts Radar Chart with cyan and indigo fill, stroke-white/20, transparent background.",
+      "kanban": "Todo list columns should be semi-transparent containers (bg-white/5), tasks are glass cards (bg-white/10)."
+    }
+  },
+  "motion_and_interactions": {
+    "engine": "Framer Motion (mandatory for grid entry and gamification events).",
+    "hover_states": "All interactive elements must have hover states. E.g. hover:bg-white/10 hover:text-white. Hover color must be lighter hue.",
+    "transitions": "transition-all duration-300 ease-in-out. Do not use generic 'transition: all' in pure CSS, use Tailwind specific 'transition-colors' or 'transition-transform'.",
+    "accessibility": "Respect prefers-reduced-motion."
+  },
+  "icons_and_assets": {
+    "icons_library": "@phosphor-icons/react (Weight: duotone or regular) to match the high-end dashboard feel. DO NOT USE generic FontAwesome.",
+    "installation_command": "yarn add @phosphor-icons/react framer-motion recharts lucide-react"
+  },
+  "image_urls": [
+    {
+      "url": "https://images.unsplash.com/photo-1544717305-2782549b5136?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwyfHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc0ODkxNzUzfDA&ixlib=rb-4.1.0&q=85",
+      "description": "smiling woman standing while holding orange folder",
+      "category": "student_avatar_1"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1529068755536-a5ade0dcb4e8?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwxfHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc0ODkxNzUzfDA&ixlib=rb-4.1.0&q=85",
+      "description": "man taking selfie",
+      "category": "student_avatar_2"
+    },
+    {
+      "url": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHw0fHxzdHVkZW50JTIwcG9ydHJhaXR8ZW58MHx8fHwxNzc0ODkxNzUzfDA&ixlib=rb-4.1.0&q=85",
+      "description": "shallow focus photography of woman outdoor during day",
+      "category": "teacher_avatar_1"
+    },
+    {
+      "url": "https://static.prod-images.emergentagent.com/jobs/e8d419b2-4789-4284-aef9-3fec4a13d7d6/images/c32fcc829e2404f06074a430530a0b0500197e4ce8e0d6f1975e73ef069c1a36.png",
+      "description": "Abstract dark glassmorphism background, deep navy #0a0e1a base, subtle glowing indigo and cyan orbs",
+      "category": "hero_background"
+    },
+    {
+      "url": "https://static.prod-images.emergentagent.com/jobs/e8d419b2-4789-4284-aef9-3fec4a13d7d6/images/ad9af2a5dadc80281e45ed5ac504e7c340e0b0e88aae1165a1338ebf1fcc6b0f.png",
+      "description": "Abstract subtle dark geometric texture background, deep space blue #0a0e1a, subtle glowing cyan and emerald lines",
+      "category": "gamified_dashboard_bg"
+    }
+  ],
+  "testing": {
+    "attributes": "All interactive and key informational elements MUST include `data-testid` attribute. Applies to: buttons, links, form inputs, menus, error messages, user balances, confirmation text. Convention: kebab-case, role-based."
+  },
+  "instructions_to_main_agent": [
+    "Always use the media URLs provided in this JSON. NEVER use placeholder URLs like via.placeholder.com.",
+    "Ensure glassmorphism is achieved using `bg-[#111827]/60 backdrop-blur-xl border border-white/10`. Do not use pure opaque colors for cards.",
+    "Ensure dark mode is the default and only mode.",
+    "Add 'dark' class to html/body or use a ThemeProvider.",
+    "Use Outfit for Headings, DM Sans for Body, and JetBrains Mono for code/numbers/XP tracking.",
+    "For the gamification elements (podium, leaderboard, XP), use gradients `bg-gradient-to-r from-indigo-500 to-cyan-400` sparingly, applying them mostly to text `bg-clip-text text-transparent` or progress bars.",
+    "For the AI Chatbot Drawer, use Shadcn Sheet with glass styling.",
+    "For the PrepMeter Radar, use Recharts RadarChart component with transparent background.",
+    "Adhere to `data-testid` requirements for all interactive elements.",
+    "Add 'grain' or 'noise' overlay to the main app layout background using a subtle CSS radial-gradient or SVG noise pattern."
+  ]
+}
